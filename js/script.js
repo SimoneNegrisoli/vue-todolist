@@ -12,27 +12,28 @@ createApp({
             tasks:[
                 {
                     id: 1,
-                    text: 'fare la spesa',
+                    text: 'Fare la spesa',
                     done: false
                 },
                 {
                     id: 2,
-                    text: 'cucinare ',
+                    text: 'Cucinare ',
                     done: false
                 },
                 {
                     id: 3,
-                    text: 'sistemare casa',
+                    text: 'Sistemare casa',
                     done: true
                 },
                 {
                     id: 4,
-                    text: 'lavare i piatti',
+                    text: 'Lavare i piatti',
                     done: false
                 }
             ],
             lastId: 3,
-            addTextTask: ''
+            addTextTask: '',
+
         }
     },
     methods: {
@@ -41,12 +42,13 @@ createApp({
         },
         addTask(){
             this.lastId++
+            const upperCaseText = this.addTextTask.charAt(0).toUpperCase() + this.addTextTask.slice(1).toLowerCase()
             const newTask = {
                 id: this.lastId,
-                text: this.addTextTask,
+                text: upperCaseText,
                 done: false
             }
-            this.tasks.push(newTask)
+            this.tasks.unshift(newTask)
             this.addTextTask = ''
         }
         
