@@ -6,6 +6,13 @@
 .done{
     text-decoration: line-through;
 }
+i{
+    transition: all 0.4s;
+}
 i:hover{
     color: red;
+    transform: scale(1.1);
+}
+li:hover{
+    cursor: pointer;
 }

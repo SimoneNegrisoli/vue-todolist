@@ -27,7 +27,7 @@
             <main>
                 <ul class="list-group" v-if="tasks.length > 0">
                     <li class="list-group-item d-flex justify-content-between" :class="{'done' : singleTask.done}"
-                        v-for="(singleTask,index) in tasks" :key="singleTask.id">
+                        v-for="(singleTask,index) in tasks" :key="singleTask.id" @click="singleTask.done = !singleTask.done">
                         <span>{{singleTask.text}}</span>
                         <i class="fa-solid fa-trash-can" @click="removeTask(index)"></i>
                     </li>
