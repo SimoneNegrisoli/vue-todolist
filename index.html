@@ -20,7 +20,7 @@
             <header class="text-center">
                 <h1>To do list </h1>
                 <div class="form-inline">
-                    <input type="text" class="border rounded-2 mx-4" v-model="addTextTask">
+                    <input type="text" class="border rounded-2 mx-4" v-model="addTextTask" @keyup.enter="addTask">
                     <button class="btn btn-primary mb-2" @click="addTask()">Aggiungi</button>
                 </div>
             </header>
