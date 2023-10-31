@@ -11,6 +11,24 @@
 <body>
 
     <div id="app">
+        <div class="container">
+            <header class="text-center">
+                <h1>To do list </h1>
+                <div class="form-inline">
+                    <input type="text"  class="border rounded-2 mx-4">
+                    <button class="btn btn-primary mb-2">Aggiungi</button>
+                </div>
+            </header>
+            <main>
+                <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between" :class="{'done' : singleTask.done}" v-for="(singleTask,index) in tasks" :key="singleTask.id">
+                        <span>{{singleTask.text}}</span>
+                        <i class="fa-solid fa-trash-can"></i>
+                    </li>
+                  </ul>
+            </main>
+        </div>
+       
 
     </div>
     
