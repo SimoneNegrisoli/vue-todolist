@@ -1,7 +1,4 @@
 /*
-Bonus:
-1- oltre al click sul pulsante, intercettare anche il tasto ENTER per aggiungere il todo alla lista
-2- cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente (se `done` era uguale a `false`, impostare `true` e viceversa)
 3- Bonus Super (superfacoltativo ): usare id invece di indici nei metodi
 */
 
@@ -54,3 +51,7 @@ createApp({
         
     }
 }).mount('#app');
+
+/*
+potrei fare un altro documento in cui realizzo una lista della spesa, aggiungo un pulsante per le quantita e un input per mettere i grammi delle cose che si vogliono acquistare
+*/
