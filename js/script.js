@@ -60,12 +60,23 @@ createApp({
                     done: false
                 }
             ],
-            lastId: 3
+            lastId: 3,
+            addTextTask: ''
         }
     },
     methods: {
         removeTask(index){
             this.tasks.splice(index,1)
+        },
+        addTask(){
+            this.lastId++
+            const newTask = {
+                id: this.lastId,
+                text: this.addTextTask,
+                done: false
+            }
+            this.tasks.push(newTask)
+            this.addTextTask = ''
         }
         
     }
